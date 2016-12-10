@@ -16,7 +16,8 @@ angular.module('elsenApp')
 			var deferred = $q.defer();
 			var dataMap = {};
 			var skipFirst = false;
-			Papa.parse('/timeseries.csv', {
+			// use '/timeseries.csv' instead of the github URL when running locally
+			Papa.parse('https://citrus7.github.io/Elsen-Demo/dist/timeseries.csv', {
 				download: true,
 				worker: true,
 				step: function(row) {
