@@ -14,7 +14,6 @@ angular.module('elsenApp')
 	$scope.editRow = "";
 	$scope.dataMap = {};
 	$scope.dataArray = [];
-	
 	$scope.idSelectedRow = null;
 	
 	init();
@@ -32,7 +31,6 @@ angular.module('elsenApp')
 			});
 		});
 	}
-	
 
 	/**
 	* Set selected row on click and refresh graph
@@ -41,7 +39,6 @@ angular.module('elsenApp')
 	   $scope.idSelectedRow = idSelectedRow;
 	   console.log($scope.dataMap[idSelectedRow][3]);
 	   drawGraph(idSelectedRow, $scope.dataMap[idSelectedRow][3]);
-	   
 	};
 	
 	/**

@@ -9,3 +9,7 @@
 .selected {
   background-color: red;
 }
+
+.panel-custom {
+  margin-top: 25px;
+}

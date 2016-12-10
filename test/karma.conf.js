@@ -31,7 +31,7 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/papaparse/papaparse.js',
       'bower_components/angular-smart-table/dist/smart-table.js',
-      'bower_components/highcharts/highcharts.js',
+      'bower_components/highcharts/highstock.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
