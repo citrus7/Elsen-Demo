@@ -10,6 +10,7 @@ A live demo can be viewed here: https://citrus7.github.io/Elsen-Demo/demo/#!/
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+
 If the CSV file is not loading check that it's present in /app and that the uri in dataService.js is set to the correct location
 
 ## Testing
