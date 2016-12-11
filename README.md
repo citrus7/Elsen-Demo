@@ -9,7 +9,7 @@ A live demo can be viewed here: https://citrus7.github.io/Elsen-Demo/demo/#!/
 
 ## Build & development
 
-#If you have cloned this repository and are running for the first time you must run these commands:
+###If you have cloned this repository and are running for the first time you must run these commands:
 
 `bower install`
 
