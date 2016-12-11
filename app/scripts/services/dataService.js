@@ -7,7 +7,7 @@
  * Service for transforming the CSV into a useable format
  */
 angular.module('elsenApp')
-	.factory('DataService', ['$q', function ($q) {
+	.factory('DataService', ['$q', 'Papa', function ($q, Papa) {
 		console.log('data service started');
 		/**
 		* Load and Parse CSV Data
@@ -16,7 +16,9 @@ angular.module('elsenApp')
 			var deferred = $q.defer();
 			var dataMap = {};
 			var skipFirst = false;
-			Papa.parse('/timeseries.csv', {
+			//hosted file: https://citrus7.github.io/Elsen-Demo/dist/timeseries.csv
+			//local: /timeseries.csv
+			Papa.parse('https://citrus7.github.io/Elsen-Demo/dist/timeseries.csv', {
 				download: true,
 				worker: true,
 				step: function(row) {
@@ -30,7 +32,7 @@ angular.module('elsenApp')
 					// If Identifier key exists in map:
 					else if (dataMap.hasOwnProperty(row.data[0][0])) {
 						// Format raw data into epoch time and floats
-						var formattedData = [Date.parse(row.data[0][1]),parseFloat(row.data[0][2])]
+						var formattedData = [Date.parse(row.data[0][1]),parseFloat(row.data[0][2])];
 						// Add data, compare dates to start/end date, increment count
 						dataMap[row.data[0][0]][3].push(formattedData);
 						dataMap[row.data[0][0]][2] += 1;
@@ -43,7 +45,7 @@ angular.module('elsenApp')
 					}
 					// Else create key and add entry:
 					else {
-						var formattedData = [Date.parse(row.data[0][1]),parseFloat(row.data[0][2])]
+						var formattedData = [Date.parse(row.data[0][1]),parseFloat(row.data[0][2])];
 						dataMap[row.data[0][0]] = [row.data[0][1], row.data[0][1], 1, [formattedData]];
 					}
 				},
@@ -52,9 +54,9 @@ angular.module('elsenApp')
 					console.log(dataMap);
 					deferred.resolve(dataMap);
 				}
-			})
+			});
 			return deferred.promise;
-		};
+		}
 		
 		return {
 			loadData:loadData
