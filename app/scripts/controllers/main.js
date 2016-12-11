@@ -37,7 +37,6 @@ angular.module('elsenApp')
 	**/
 	$scope.setSelected = function (idSelectedRow) {
 	   $scope.idSelectedRow = idSelectedRow;
-	   console.log($scope.dataMap[idSelectedRow][3]);
 	   drawGraph(idSelectedRow, $scope.dataMap[idSelectedRow][3]);
 	};
 	

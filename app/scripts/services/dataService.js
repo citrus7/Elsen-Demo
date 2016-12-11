@@ -8,7 +8,6 @@
  */
 angular.module('elsenApp')
 	.factory('DataService', ['$q', 'Papa', function ($q, Papa) {
-		console.log('data service started');
 		/**
 		* Load and Parse CSV Data
 		**/
@@ -50,8 +49,6 @@ angular.module('elsenApp')
 					}
 				},
 				complete: function() {
-					console.log("All done!");
-					console.log(dataMap);
 					deferred.resolve(dataMap);
 				}
 			});

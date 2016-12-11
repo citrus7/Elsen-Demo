@@ -6,6 +6,7 @@ version 0.15.1.
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+If the CSV file is not loading check that it's present in /app and that the uri in dataService.js is set to the correct location
 
 ## Testing
 
@@ -26,3 +27,6 @@ Contains the HTML of the main page
 
 styles/main.css
 A couple of styles for formatting
+
+## Note:
+It seems like PapaParse can't be minified so I've placed the include line outside of the grunt build section in index.html.  When building (grunt build or grunt serve:dist) papaparse.min.js must be copied into dist manually and the include line in index.html must be changed to its location.
