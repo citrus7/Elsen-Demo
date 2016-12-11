@@ -40,4 +40,4 @@ styles/main.css
 A couple of styles for formatting
 
 ## Note:
-It seems like PapaParse can't be minified so I've placed the include line outside of the grunt build section in index.html.  When building (grunt build or grunt serve:dist) papaparse.min.js must be copied into dist manually and the include line in index.html must be changed to its location.
+It seems like PapaParse can't be minified so I've placed the include line outside of the grunt build section in index.html.  When building (`grunt build` or `grunt serve:dist`) papaparse.min.js must be copied into dist manually and the include line in index.html must be changed to its location.
