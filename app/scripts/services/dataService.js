@@ -17,7 +17,7 @@ angular.module('elsenApp')
 			var skipFirst = false;
 			//hosted file: https://citrus7.github.io/Elsen-Demo/dist/timeseries.csv
 			//local: /timeseries.csv
-			Papa.parse('https://citrus7.github.io/Elsen-Demo/dist/timeseries.csv', {
+			Papa.parse('/timeseries.csv', {
 				download: true,
 				worker: true,
 				step: function(row) {
