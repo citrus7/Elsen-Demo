@@ -2,6 +2,9 @@
 
 This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
 version 0.15.1.
+A live demo can be viewed here: https://citrus7.github.io/Elsen-Demo/demo/#!/
+- Click on items in the list to display a graph
+- Click on table headers to sort that column
 
 ## Build & development
 
